@@ -1,0 +1,53 @@
+.btn:link,
+.btn:visited,
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    padding:1.5rem 4rem;
+    text-transform: uppercase;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    //<button>
+    border: none;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba($cb,0.3);
+}
+.btn:active,
+.btn:focus{
+    outline: none;
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba($cb,0.2);
+}
+.btn-white{
+    background-color: $cw;
+    color: $cg;
+}
+.btn-green{
+    background-color: $pc;
+    color: $cw;
+}
+.btn-txt{
+    &:link,
+    &:visited{
+        color:$pc;
+        font-size: $default-font;
+        text-decoration: none;
+        display: inline-block;
+        border-bottom: .1rem solid $pc;
+        padding: .3rem;
+        transition: all .2s;
+    }
+    &:hover{
+       background-color: $pc;
+       color: $cw;
+        box-shadow: 0 1rem 2rem rgba($cb,.15);
+        transform: translateY(-2px);
+    }
+    &:active{
+        box-shadow: 0 .5rem 1rem rgba($cb,.15);
+        transform: translateY(0);
+    }
+}

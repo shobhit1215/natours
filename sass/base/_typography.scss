@@ -1,0 +1,88 @@
+
+body{
+    font-family: "Lato",sans-serif;
+    font-size:1.6rem ;
+    line-height: 1.7;
+    color:$cg;
+    font-weight: 400;
+    
+}
+
+.text{
+    position: absolute;
+    /* top:200px;
+    left:300px; absolutely right */
+    top:40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.heading{
+    color:$cw;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+.main{
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.4rem;
+    animation-name: toLeft;
+    animation-duration:1s ;
+    animation-timing-function:ease-out ;
+    @include respond(phone)
+    {
+        letter-spacing: 1rem;
+        font-size: 5rem;
+    }
+}
+.sub{
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.8rem;
+    animation-name: toRight;
+    animation-duration:1s ;
+    animation-timing-function:ease-out ;
+    @include respond(phone)
+    {
+        letter-spacing: .5rem;
+        
+    }
+}
+.heading-secondary{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right,$sc,$tc);
+    -webkit-background-clip: text;
+    color: transparent;
+    word-spacing: 1rem;
+    letter-spacing: .2rem;
+    transition: all .2s;
+    @include respond(tab-port)
+    {
+        font-size: 2.5rem;
+    }
+    @include respond(port)
+    {
+        font-size: 2rem;
+    }
+    &:hover{
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($cb,.4);
+    }
+
+}
+.heading-tertiary{
+    font-size: $default-font;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.paragraph{
+    font-size: $default-font;
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}
